@@ -1,0 +1,11 @@
+[default]
+host = "golang.c0ze7fnisnqm.us-east-1.rds.amazonaws.com"
+port = "3306"
+database = "mydb"
+user = "root"
+password ="test1234"
+charset = "utf8"
+sql_log = true
+
+MaxIdleConns = 10
+MaxOpenConns = 100
