@@ -1,26 +1,7 @@
 package main
 
-import (
-	"github.com/labstack/echo"
-	config "github.com/spf13/viper"
-	"pr-prueba-svc/internal/user/routes"
-	"pr-prueba-svc/kit/libs"
-)
+import "pr-prueba-svc/cmd/prPruebaSvc/bootstrap"
 
-func init() {
-	config.AddConfigPath("./kit/config-mysql")
-	dbConfig := libs.Configure("./kit/config-mysql", "mysql")
-	libs.DB = dbConfig.InitMysqlDB()
-}
-func mainMiddlewares(e *echo.Echo) {
-
-}
-func mainRoutes(e *echo.Echo) {
-	routes.User(e)
-}
 func main() {
-	e := echo.New()
-	mainMiddlewares(e)
-	mainRoutes(e)
-	e.Logger.Fatal(e.Start(":80"))
+	bootstrap.Run()
 }
