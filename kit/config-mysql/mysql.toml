@@ -1,7 +1,7 @@
 [default]
-host = "golang.c0ze7fnisnqm.us-east-1.rds.amazonaws.com"
+host = "mydb.c0ze7fnisnqm.us-east-1.rds.amazonaws.com"
 port = "3306"
-database = "mydb"
+database = "mydb1"
 user = "root"
 password ="test1234"
 charset = "utf8"
